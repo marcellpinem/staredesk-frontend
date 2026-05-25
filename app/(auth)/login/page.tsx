@@ -51,7 +51,7 @@ export default function LoginPage() {
               placeholder="user@domain.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border-2 px-3 py-2 rounded-[5px] shadow-sm shadow-gray-800 placeholder:font-semibold"
+              className="border-2 px-3 py-2 rounded-[5px] placeholder:font-semibold"
             />
           </div>
 
@@ -63,7 +63,7 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-              className="border-2 px-3 py-2 rounded-[5px] shadow-sm shadow-gray-800 placeholder:font-semibold"
+              className="border-2 px-3 py-2 rounded-[5px] placeholder:font-semibold"
             />
           </div>
 

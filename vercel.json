@@ -1,9 +1,5 @@
 {
   "github": {
     "silent": true
-  },
-  "buildCommand": "next build",
-  "devIndicators": {
-    "buildActivity": false
   }
 }

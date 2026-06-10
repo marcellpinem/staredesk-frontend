@@ -1,5 +1,3 @@
-"use client";
-
 import DeviceStatusBar from "@/components/ui/dashboard/DeviceStatusBar";
 import LiveConditionCard from "@/components/ui/dashboard/LiveConditionCard";
 import SensorReadings from "@/components/ui/dashboard/SensorReadings";

@@ -1,7 +1,5 @@
 "use client";
 
-// frontend/components/ui/dashboard/LiveConditionCard.tsx
-
 import { useDevice } from "@/context/DeviceContext";
 import { type Condition } from "@/hooks/useWebSocket";
 import Image from "next/image";

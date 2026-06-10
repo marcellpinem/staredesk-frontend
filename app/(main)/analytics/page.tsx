@@ -4,6 +4,7 @@ import ConditionBreakdown from "@/components/ui/analytics/ConditionBreakdown";
 import FocusSummaryCard from "@/components/ui/analytics/FocusSummaryCard";
 import PeakHoursCard from "@/components/ui/analytics/PeakHoursCard";
 import SessionHistoryTable from "@/components/ui/analytics/SessionHistoryTable";
+import { SessionTimeline } from "@/components/ui/analytics/TimelineChart";
 import { Calendar } from "lucide-react";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
@@ -96,8 +97,9 @@ export default function AnalyticsPage() {
             <ConditionBreakdown />
           </div>
           {/* RIGHT CONTENT */}
-          <div className="border w-full max-w-100">
+          <div className="w-full max-w-100 flex flex-col gap-3">
             <SessionHistoryTable />
+            <SessionTimeline />
           </div>
         </div>
       </div>

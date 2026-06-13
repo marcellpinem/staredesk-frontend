@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import DeviceStatusBar from "@/components/ui/dashboard/DeviceStatusBar";
 import LiveConditionCard from "@/components/ui/dashboard/LiveConditionCard";
 import SensorReadings from "@/components/ui/dashboard/SensorReadings";
 import SessionTimer from "@/components/ui/dashboard/SessionTimer";
 import TodaySummaryCard from "@/components/ui/dashboard/TodaySummaryCard";
+
+export const metadata: Metadata = {
+  title: "Dashboard - Staredesk",
+};
 
 export default function DashboardPage() {
   return (

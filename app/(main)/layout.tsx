@@ -7,19 +7,20 @@ import { DeviceProvider } from "@/context/DeviceContext";
 
 export default function MainLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <DeviceProvider>
-      <div className="h-screen flex flex-col overflow-hidden pt-18">
+      <div className="relative h-dvh overflow-hidden bg-[url('/bg-mobile-main.svg')] bg-cover bg-center bg-no-repeat lg:bg-[url('/bg-desktop-main.svg')]">
         <Navbar />
-        <div className="flex-1 flex flex-row overflow-hidden">
-          <Sidebar />
-          <div className="flex-1 overflow-y-auto pb-18.75 md:pb-0 md:pl-50">
-            {children}
-          </div>
-        </div>
+
+        <Sidebar />
+
+        <main className="h-full overflow-y-auto pt-18 pb-18.75 md:pb-0 md:pl-50">
+          {children}
+        </main>
+
         <BottomNavBar />
       </div>
     </DeviceProvider>

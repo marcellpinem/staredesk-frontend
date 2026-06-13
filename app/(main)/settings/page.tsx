@@ -1,9 +1,11 @@
-"use client";
+import type { Metadata } from "next";
 
-export default function SettingsPage() {
-  return (
-    <div>
-      <div>SETTINGS CONTENT</div>
-    </div>
-  );
+import SettingsClient from "@/features/SettingsClient";
+
+export const metadata: Metadata = {
+  title: "Settings - Staredesk",
+};
+
+export default function LoginPage() {
+  return <SettingsClient />;
 }

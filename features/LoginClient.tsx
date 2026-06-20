@@ -41,23 +41,23 @@ export default function LoginClient() {
 
   return (
     <>
-      <section className="hidden lg:basis-[65%] lg:flex lg:items-end">
-        <div className="h-200">
+      <section className="hidden lg:flex lg:h-dvh lg:basis-[65%] lg:items-end lg:overflow-hidden">
+        <div className="h-[min(82dvh,800px)]">
           <Image
             src="/logo-desktop.svg"
             alt="Logo Desktop"
             width={100}
             height={100}
-            className="h-full w-full"
+            priority
+            className="h-full w-full object-contain"
           />
         </div>
       </section>
 
-      {/* RIGHT PANEL */}
-      <section className="flex min-h-screen w-full items-center justify-center p-6 lg:basis-[35%] lg:p-0 lg:bg-white">
+      <section className="flex min-h-dvh w-full items-center justify-center p-6 lg:h-dvh lg:min-h-0 lg:basis-[35%] lg:bg-white lg:p-0">
         <form
           onSubmit={handleLogin}
-          className="flex w-full  max-w-sm flex-col items-center justify-center gap-4 rounded-sm border-3 lg:border-none bg-white lg:bg-none border-black px-8 py-10 lg:p-0 h-full shadow-sm lg:shadow-none backdrop-blur-sm"
+          className="flex h-full w-full max-w-sm flex-col items-center justify-center gap-4 rounded-sm border-3 border-black bg-white px-8 py-10 shadow-sm backdrop-blur-sm lg:border-none lg:bg-transparent lg:p-0 lg:shadow-none"
         >
           <Image
             src="/staredesk-logo.svg"
@@ -65,7 +65,7 @@ export default function LoginClient() {
             width={100}
             height={100}
             priority
-            className="h-52 lg:h-72 w-auto object-contain"
+            className="h-52 w-auto object-contain lg:h-105"
           />
 
           <div className="flex w-full flex-col gap-1">

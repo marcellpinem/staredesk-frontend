@@ -12,16 +12,20 @@ export default function MainLayout({
 }>) {
   return (
     <DeviceProvider>
-      <div className="relative h-dvh overflow-hidden bg-[url('/bg-mobile-main.svg')] bg-cover bg-center bg-no-repeat lg:bg-[url('/bg-desktop-main.svg')]">
-        <Navbar />
+      <div className="relative h-dvh overflow-hidden bg-white">
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/bg-mobile-main.svg')] bg-cover bg-center bg-no-repeat scale-110 lg:bg-[url('/bg-desktop-main.svg')] lg:scale-125" />
 
-        <Sidebar />
+        <div className="relative z-10 h-full">
+          <Navbar />
 
-        <main className="h-full overflow-y-auto pt-18 pb-18.75 md:pb-0 md:pl-50">
-          {children}
-        </main>
+          <Sidebar />
 
-        <BottomNavBar />
+          <main className="h-full overflow-y-auto pt-18 pb-18.75 md:pb-0 md:pl-50">
+            {children}
+          </main>
+
+          <BottomNavBar />
+        </div>
       </div>
     </DeviceProvider>
   );

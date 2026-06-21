@@ -117,6 +117,7 @@ export default function PeakHoursCard({ range }: Props) {
 
         const mappedPeakHours = rawEntries
           .map(normalizeEntry)
+          .sort((a, b) => b.totalSec - a.totalSec)
           .slice(0, 3)
           .map((entry) => ({
             time: formatHourWib(entry.hour),
